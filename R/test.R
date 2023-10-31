@@ -21,5 +21,5 @@ gitcreds::gitcreds_set()
 
 # Creating R files for my functions
 use_r("nodes_config")
-
+usethis::use_git_remote("origin", url = NULL, overwrite = TRUE)
 load_all()
