@@ -7,6 +7,8 @@ if (!requireNamespace(libs, quietly = TRUE)){
 
 
 library(usethis)
+usethis::use_git()
+
 use_git_config(user.name = "AraujoTheus", user.email = "matheusaraujolima@live.com")
 
 library(usethis)
@@ -16,4 +18,5 @@ library(gitcreds)
 gitcreds::gitcreds_set()
 
 use_git()
+usethis::use_github()
 use_git()
