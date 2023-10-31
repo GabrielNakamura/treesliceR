@@ -5,18 +5,21 @@ if (!requireNamespace(libs, quietly = TRUE)){
   install.packages(libs)
 }
 
-
-library(usethis)
-usethis::use_git()
-
-use_git_config(user.name = "AraujoTheus", user.email = "matheusaraujolima@live.com")
-
-library(usethis)
-create_github_token()
-
 library(gitcreds)
+library(usethis)
+
+# Running git
+usethis::use_git()
+# Configurating my user id
+use_git_config(user.name = "AraujoTheus", user.email = "matheusaraujolima@live.com")
+# Creating a git project
+usethis::use_github()
+
+# Getting cred
 gitcreds::gitcreds_set()
 
-use_git()
-usethis::use_github()
-use_git()
+
+# Creating R files for my functions
+use_r("nodes_config")
+
+load_all()
