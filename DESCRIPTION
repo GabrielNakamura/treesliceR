@@ -17,7 +17,7 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
-URL: https://github.com/AraujoTheus/treesliceR, https://araujotheus.github.io/treesliceR/
+URL: https://github.com/AraujoTheus/treesliceR, https://araujotheus.github.io/treesliceR/, https://araujomat.github.io/treesliceR/
 BugReports: https://github.com/AraujoTheus/treesliceR/issues
 Imports: 
     ape (>= 5.7-1),
@@ -25,3 +25,6 @@ Imports:
     foreach (>= 1.5.2),
     ggplot2 (>= 3.4.2),
     sf (>= 1.0-9)
+Depends: 
+    R (>= 2.10)
+LazyData: true
