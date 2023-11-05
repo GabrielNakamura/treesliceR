@@ -149,9 +149,3 @@ your ideas through pull requests.
 If you have intriguing ideas for exploring phylogenetic information
 temporally, please feel free to contact us via email at:
 *<matheusaraujolima@live.com>*.
-
-<style>
-p.caption {
-  font-size: 0.8em;
-}
-</style>
