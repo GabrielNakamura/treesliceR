@@ -5,6 +5,17 @@
 # stc = a character vector defining a descriptive statistic to make the plot (default is "mean").
 # rate = need to provide the CpRate desired (i.e., "CpD", "CpE", "CpB_RW", "CpB");
 
+#' Title
+#'
+#' @param sst_output
+#' @param rate
+#' @param stc
+#'
+#' @return
+#' @export
+#'
+#' @examples
+
 CpR_sensitivity_plot <- function(sst_output, rate = NULL, stc = "mean"){
 
   if(is.null(rate) == TRUE){

@@ -5,6 +5,15 @@
 # tree = a phylogenetic tree of the phylo class;
 
 ## Capturing nodes and tree information
+#' Title
+#'
+#' @param tree
+#'
+#' @return
+#' @export
+#'
+#' @examples
+
 nodes_config <- function(tree){
 
   # if the tree is ultrametric, make the evaluations

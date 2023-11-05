@@ -1,19 +1,27 @@
 Package: treesliceR
-Title: What the Package Does (One Line, Title Case)
+Title: A Toolbox to Slice Phylogenies and Infer Phylogenetic Patterns Over Time
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+    c(person("Matheus Lima", "Araujo", , "matheusaraujolima@live.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-9111-725X")),
+           person("Luiz Gabriel Souza e Souza", "Ferreira", , "luizferreira@discente.ufg.br", role = "aut",
+           comment = c(ORCID = "0009-0002-5881-9791")),
+           person("Marco Tulio Pacheco", "Coelho", , "marcotpcoelho@gmail.com", role = "aut",
+           comment = c(ORCID = "0000-0002-7831-3053")),
+           person("Gabriel", "Nakamura", , "gabriel.nakamura.souza@gmail.com", role = "aut",
+           comment = c(ORCID = "0000-0002-5144-5312")),
+           person("Thiago Fernando", "Rangel", , "rangel.tf@gmail.com", role = "aut",
+           comment = c(ORCID = "0000-0002-2001-7382")))
+Description: Provide a range of functions with multiple criteria for cutting phylogenies at any evolutionary depth. It enables users to cut phylogenies in any orientation, such as 'rootwardly' (from root to tips) and 'tipwardly' (from tips to its root), or allows users to define a specific time interval of interest. It can also be used to crate several phylogenetic pieces of equal temporal width. Moreover, it allows the assessment of novel temporal rates for various phylogenetic indexes, which can be quickly displayed graphically.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
-URL: https://github.com/AraujoTheus/treesliceR
+URL: https://github.com/AraujoTheus/treesliceR, https://araujotheus.github.io/treesliceR/
 BugReports: https://github.com/AraujoTheus/treesliceR/issues
 Imports: 
-    ape,
-    doParallel,
-    foreach,
-    ggplot2,
-    sf
+    ape (>= 5.7-1),
+    doParallel (>= 1.0.17),
+    foreach (>= 1.5.2),
+    ggplot2 (>= 3.4.2),
+    sf (>= 1.0-9)

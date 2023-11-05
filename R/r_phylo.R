@@ -14,6 +14,23 @@
 # criteria = temporal criteria for slices ("pd" or "my");
 # ncor = number of cores the user wants to parallelize.
 
+#' Title
+#'
+#' @param tree
+#' @param n
+#' @param mat
+#' @param asb
+#' @param index
+#' @param comp
+#' @param method
+#' @param criteria
+#' @param ncor
+#'
+#' @return
+#' @export
+#'
+#' @examples
+
 r_phylo <- function(tree, n, mat, asb, index = NULL, comp = "sorensen",
                     method = "multisite", criteria = "my", ncor = 0){
 

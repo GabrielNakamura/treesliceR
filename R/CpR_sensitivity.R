@@ -17,6 +17,24 @@
 # ncor = number of cores the user wants to parallelize.
 
 
+#' Title
+#'
+#' @param tree
+#' @param vec
+#' @param mat
+#' @param asb
+#' @param rate
+#' @param samp
+#' @param comp
+#' @param method
+#' @param criteria
+#' @param ncor
+#'
+#' @return
+#' @export
+#'
+#' @examples
+
 CpR_sensitivity <- function(tree, vec, mat = NULL, asb = NULL, rate = NULL, samp = 0,
                             comp = "sorensen", method = "multisite",
                             criteria = "my", ncor = 0){

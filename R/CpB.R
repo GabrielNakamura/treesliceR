@@ -12,6 +12,22 @@
 # starts to accumulate on a given site. The default is 5%;
 # ncor = number of cores the user wants to parallelize.
 
+#' Title
+#'
+#' @param tree
+#' @param n
+#' @param asb
+#' @param comp
+#' @param method
+#' @param criteria
+#' @param pBO
+#' @param ncor
+#'
+#' @return
+#' @export
+#'
+#' @examples
+
 CpB <- function(tree, n, asb, comp = "sorensen",
                 method = "multisite", criteria = "my", pBO = 5, ncor = 0){
 

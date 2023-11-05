@@ -12,6 +12,19 @@
 #pal <- new_pal
 # map <- grid
 
+#' Title
+#'
+#' @param data
+#' @param rate
+#' @param map
+#' @param pal
+#' @param qtl
+#'
+#' @return
+#' @export
+#'
+#' @examples
+
 CpR_graph <- function(data, rate = NULL, map = NULL, pal = NULL, qtl = FALSE){
 
   if(is.null(rate) == TRUE){

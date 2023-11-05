@@ -11,6 +11,20 @@
 # dropNodes = remove those void nodes without information (TRUE or FALSE).
 
 # Make a phylogenetic slice in both orientation to return a single phylo piece;
+#' Title
+#'
+#' @param tree
+#' @param from
+#' @param to
+#' @param invert
+#' @param criteria
+#' @param dropNodes
+#'
+#' @return
+#' @export
+#'
+#' @examples
+
 squeeze_int <- function(tree, from, to, invert = FALSE, criteria = "my", dropNodes = FALSE){
 
   # The used want a phylogenetic interval?

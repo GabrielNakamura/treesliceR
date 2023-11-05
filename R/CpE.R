@@ -11,6 +11,20 @@
 # ncor = number of cores the user wants to parallelize.
 
 
+#' Title
+#'
+#' @param tree
+#' @param n
+#' @param mat
+#' @param criteria
+#' @param pEO
+#' @param ncor
+#'
+#' @return
+#' @export
+#'
+#' @examples
+
 CpE <- function(tree, n, mat, criteria = "my", pEO = 5, ncor = 0){
 
   ## Cleaning the phylogeny (if necessary) and cutting it into pieces ----------

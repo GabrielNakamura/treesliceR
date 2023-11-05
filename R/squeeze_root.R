@@ -7,6 +7,18 @@
 # criteria = temporal criteria to make the slices, it can be "my" (DEFAULT) or "pd";
 # dropNodes = remove those void nodes without information (TRUE or FALSE).
 
+#' Title
+#'
+#' @param tree
+#' @param time
+#' @param criteria
+#' @param dropNodes
+#'
+#' @return
+#' @export
+#'
+#' @examples
+
 squeeze_root <- function(tree, time, criteria = "my", dropNodes = FALSE){
 
   ## CUTTING THE PHYLOGENY ROOTWARDLY (FROM ROOTS -> TIPS) ##

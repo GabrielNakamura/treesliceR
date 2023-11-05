@@ -10,6 +10,21 @@
 # timeSteps = return a vector of the time-steps used to make the phylogenetic slices (TRUE or FALSE);
 # dropNodes = remove those "void" nodes.
 
+#' Title
+#'
+#' @param tree
+#' @param n
+#' @param criteria
+#' @param method
+#' @param timeSteps
+#' @param dropNodes
+#' @param returnTree
+#'
+#' @return
+#' @export
+#'
+#' @examples
+
 phylo_pieces <- function(tree, n, criteria = "my", method = 1,
                          timeSteps = FALSE, dropNodes = FALSE, returnTree = FALSE){
 

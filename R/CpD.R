@@ -11,6 +11,20 @@
 # ncor = number of cores the user wants to parallelize.
 
 
+#' Title
+#'
+#' @param tree
+#' @param n
+#' @param mat
+#' @param criteria
+#' @param pDO
+#' @param ncor
+#'
+#' @return
+#' @export
+#'
+#' @examples
+
 CpD <- function(tree, n, mat, criteria = "my", pDO = 5, ncor = 0){
 
   ## Cleaning the phylogeny (if necessary) and cutting it into pieces ----------

@@ -12,6 +12,22 @@
 # starts to accumulate on a given site. The default is 5%;
 # ncor = number of cores the user wants to parallelize.
 
+#' Title
+#'
+#' @param tree
+#' @param n
+#' @param mat
+#' @param asb
+#' @param method
+#' @param criteria
+#' @param pBO
+#' @param ncor
+#'
+#' @return
+#' @export
+#'
+#' @examples
+
 CpB_RW <- function(tree, n, mat, asb, method = "multisite", criteria = "my", pBO = 5, ncor = 0){
 
   ## Cleaning the phylogeny (if necessary) and cutting it into pieces ----------
