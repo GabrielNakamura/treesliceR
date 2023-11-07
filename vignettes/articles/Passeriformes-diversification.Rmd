@@ -14,7 +14,7 @@ This article aims to...
 First of all, to run the analysis within this vignette we'll need to load the `treesliceR`, `ape` and `ggplot2` packages.
 ```{r setup}
 
-libs <- c("ape", "devtools", "ggplot2", "ggpubr")
+libs <- c("ape", "devtools", "ggplot2")
 if (!requireNamespace(libs, quietly = TRUE)){
     install.packages(libs)
   }
