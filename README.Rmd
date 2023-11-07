@@ -13,11 +13,6 @@ knitr::opts_chunk$set(
 )
 ```
 
-<style>
-p.caption {
-  font-size: 0.8em;
-}
-</style>
 
 # treesliceR
 
@@ -36,7 +31,7 @@ knitr::include_graphics("man/figures/Framework1.png")
 ```
 
 
-The second goal of **treesliceR** is to provide functions that facilitate the assessment of a novel family of *rates of accumulation through time for any phylogenetic index* (Figure 2). The rationale behind these rates is that most currently available indexes do not differentiate the contributions of lineages at different depths to a given observed pattern. This implies that the same value of a particular phylogenetic index can be obtained through different configurations of species compositions and tree topologies. For instance, a high phylogenetic diversity observed within an assemblage could result from a few deep lineages or a high richness of recent lineages. Therefore, **treesliceR** offers functions for calculating the accumulation of a given phylogenetic pattern (e.g., PD, PE, Pβ...) through time to elucidate the main lineages depths responsible for generating it. For more detailed information regarding the mathematical procedures behind these rates, please refer to [Araujo et al. (under review)](https://github.com/AraujoTheus/treesliceR).
+The second goal of **treesliceR** is to provide functions that facilitate the assessment of a novel family of *rates of accumulation through time for any phylogenetic index* (Figure 2). The rationale behind these rates is that most currently available indexes do not differentiate the contributions of lineages at different depths to a given observed pattern. This implies that the same value of a particular phylogenetic index can be obtained through different configurations of species compositions and tree topologies. For instance, a high phylogenetic diversity observed within an assemblage could result from a few deep lineages or a high richness of recent lineages. Therefore, **treesliceR** offers functions for calculating the accumulation of a given phylogenetic pattern (e.g., PD, PE, Pβ...) through time to elucidate the main lineages depths responsible for generating it. For more detailed information regarding the mathematical procedures behind these rates, please refer to [Araujo et al. (under review)](https://github.com/AraujoMat/treesliceR).
 
 
 ```{r echo=FALSE, fig.cap = "Figure 2: This figure provide illustrated examples of the available functions for calculating rates of accumulation of phylogenetic indexes, assessing their most parsimonious number of slices to model these rates (i.e., sensitivity analysis), and presenting their graphical outputs. The figure demonstrates the functions for obtaining only the rates of accumulations of phygeloenetic β-diversity (Cpβ) as an example, but these rates can also be applied to other phylogenetic indexes (for more details, see treesliceR CRAN)."}
@@ -58,7 +53,7 @@ install.packages("treesliceR")
 Alternatively, you can install the development version of **treesliceR** from [GitHub](https://github.com/) by typing:
 ``` r
 install.packages("devtools")
-devtools::install_github("AraujoTheus/treesliceR")
+devtools::install_github("AraujoMat/treesliceR")
 ```
 
 Now, you are ready to temporally dissect any phylogenetic pattern of interest!
@@ -69,15 +64,15 @@ Now, you are ready to temporally dissect any phylogenetic pattern of interest!
 
 To learn about various ways to use and solve problems using **treesliceR**, you can explore some of our vignettes:
 
-- [Basic applications](https://github.com/AraujoTheus/treesliceR): This section provides straightforward and beginner-friendly applications with simple illustrations of the tools available within the package;
-- [Prune tips](https://github.com/AraujoTheus/treesliceR): Here, you'll find an applied example of our tools focusing on Australian passeriformes, where we compare species richness distributions between older and more recent lineages;
-- [Passeriformes diversification](https://github.com/AraujoTheus/treesliceR): In this vignette, we replicate the case study by [Araujo et al. (in review)](https://github.com/AraujoTheus/treesliceR). It presents the workflow executed for both a single phylogeny and multiple sampled phylogenies for passeriformes.
+- [Basic applications](https://github.com/AraujoMat/treesliceR): This section provides straightforward and beginner-friendly applications with simple illustrations of the tools available within the package;
+- [Prune tips](https://github.com/AraujoMat/treesliceR): Here, you'll find an applied example of our tools focusing on Australian passeriformes, where we compare species richness distributions between older and more recent lineages;
+- [Passeriformes diversification](https://github.com/AraujoMat/treesliceR): In this vignette, we replicate the case study by [Araujo et al. (in review)](https://github.com/AraujoMat/treesliceR). It presents the workflow executed for both a single phylogeny and multiple sampled phylogenies for passeriformes.
 
 
 
 ## Getting help
 
-Encountering issues with certain **treesliceR** functions on your computer? Please report these bugs with a minimal reproducible example on the package's [GitHub](https://github.com/AraujoTheus/treesliceR/issues) page. If you have suggestions for improving our algorithms, don't hesitate to submit your ideas through pull requests.
+Encountering issues with certain **treesliceR** functions on your computer? Please report these bugs with a minimal reproducible example on the package's [GitHub](https://github.com/AraujoMat/treesliceR/issues) page. If you have suggestions for improving our algorithms, don't hesitate to submit your ideas through pull requests.
 
 If you have intriguing ideas for exploring phylogenetic information temporally, please feel free to contact us via email at: *matheusaraujolima@live.com*.
 

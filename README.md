@@ -1,10 +1,5 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-<style>
-p.caption {
-  font-size: 0.8em;
-}
-</style>
 
 # treesliceR
 
