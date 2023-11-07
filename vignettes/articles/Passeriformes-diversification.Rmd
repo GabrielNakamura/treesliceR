@@ -26,7 +26,9 @@ library(ggpubr)
 libs <- c("treesliceR")
 if (!requireNamespace(libs, quietly = TRUE)){
     devtools::install_github("AraujoMat/treesliceR")
-  }
+  ?install_g
+}
+2
 #devtools::install_github("AraujoMat/treesliceR") # If it isn't installed within your PC
 library(treesliceR)
 ```
