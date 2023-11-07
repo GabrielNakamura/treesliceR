@@ -25,8 +25,6 @@ Imports:
     foreach (>= 1.5.2),
     ggplot2 (>= 3.4.2),
     sf (>= 1.0-9)
-Depends: 
-    R (>= 2.10)
 LazyData: true
 Config/Needs/website: rmarkdown
 Suggests: 
