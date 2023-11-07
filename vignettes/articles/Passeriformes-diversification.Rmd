@@ -35,7 +35,6 @@ library(treesliceR)
 
 Herein, we'll compare the passeriformes Diversification Rates (DR) before and after Australia aridification (~33 Mya). Primarily, we need to load the passeriformes phylogeny that are available within the package. The passeriformes phylogeny was obtained from [Jetz et al. (2012)](https://www.nature.com/articles/nature11631).
 ```{r}
-devtools::load_all() # [REMOVE AFTER COMMITING]
 tree <- pass_trees[[1]]
 ```
 
