@@ -15,13 +15,18 @@ This article aims to...
 First of all, to run the analysis within this vignette we'll need to load the `treesliceR`, `ape` and `ggplot2` packages.
 ```{r setup}
 
-libs <- c("ape", "devtools", "ggplot2", "ggpubr", "treesliceR")
+libs <- c("ape", "devtools", "ggplot2", "ggpubr")
 if (!requireNamespace(libs, quietly = TRUE)){
     install.packages(libs)
   }
 library(ape)
 library(ggplot2)
 library(ggpubr)
+
+libs <- c("treesliceR")
+if (!requireNamespace(libs, quietly = TRUE)){
+    devtools::install_github("AraujoMat/treesliceR")
+  }
 #devtools::install_github("AraujoMat/treesliceR") # If it isn't installed within your PC
 library(treesliceR)
 ```
@@ -96,17 +101,3 @@ ggplot(fam_df, aes(x = Family, y = DR_diff,
 
 
 Pay attention that the final outputs could be sligly different from those obtained on the [Araujo et al. (in review)]() manuscript. However, in contrast to the study, this example was executed only for a single passeriformes phylogeny. A more complete assessment using all phylogenies could be executed in the sections below. 
-
-
-## Second framework example
-
-Herein, we'll use the Australian passeriformes to calculate the CpB-rate for both turnover and nestedness components. Firstly, we'll need to load the paired assemblages with their respective neighborhoods to run the analysis which is stored in an intern object called `pass_asb`. This object is a list of presence-absences matrices, where each lists contain a given Australian focal cell and its respective neighborhood cells. So, let's check the header of the four first columns of the first matrix within the list:
-```{r}
-head(pass_asb[[1]][, 1:4])
-```
-
-We can run some sensitivity analysis to find the most parsimonious number of slices to assess the CpB rate patterns. But first, we'll need to create an vector of number of slices:
-```{r}
-vec <- c(250, 500, 750, 1000, 1250, 1500, 1750, 2000)
-```
-
