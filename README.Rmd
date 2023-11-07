@@ -13,11 +13,11 @@ knitr::opts_chunk$set(
 )
 ```
 
-
 # treesliceR
 
 <!-- badges: start -->
 <!-- badges: end -->
+
 
 ## Overview
 
@@ -52,7 +52,6 @@ install.packages("treesliceR")
 
 Alternatively, you can install the development version of **treesliceR** from [GitHub](https://github.com/) by typing:
 ``` r
-install.packages("devtools")
 devtools::install_github("AraujoMat/treesliceR")
 ```
 

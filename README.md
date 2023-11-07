@@ -111,7 +111,6 @@ Alternatively, you can install the development version of **treesliceR**
 from [GitHub](https://github.com/) by typing:
 
 ``` r
-install.packages("devtools")
 devtools::install_github("AraujoMat/treesliceR")
 ```
 
