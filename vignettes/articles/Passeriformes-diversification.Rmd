@@ -1,5 +1,6 @@
 ---
 title: "Passeriformes diversification"
+output: html_document
 ---
 
 ```{r, include = FALSE}
@@ -13,11 +14,16 @@ This article aims to...
 
 First of all, to run the analysis within this vignette we'll need to load the `treesliceR`, `ape` and `ggplot2` packages.
 ```{r setup}
-# devtools::install_github("AraujoMat/treesliceR") # If it isn't installed within your PC
-library(treesliceR)
+
+libs <- c("ape", "devtools", "ggplot2", "ggpubr", "treesliceR")
+if (!requireNamespace(libs, quietly = TRUE)){
+    install.packages(libs)
+  }
 library(ape)
 library(ggplot2)
 library(ggpubr)
+#devtools::install_github("AraujoMat/treesliceR") # If it isn't installed within your PC
+library(treesliceR)
 ```
 
 # Case study using a single passeriformes tree

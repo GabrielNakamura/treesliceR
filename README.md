@@ -65,7 +65,7 @@ given phylogenetic pattern (e.g., PD, PE, Pβ…) through time to elucidate
 the main lineages depths responsible for generating it. For more
 detailed information regarding the mathematical procedures behind these
 rates, please refer to [Araujo et al. (under
-review)](https://github.com/AraujoTheus/treesliceR).
+review)](https://github.com/AraujoMat/treesliceR).
 
 <div class="figure">
 
@@ -112,7 +112,7 @@ from [GitHub](https://github.com/) by typing:
 
 ``` r
 install.packages("devtools")
-devtools::install_github("AraujoTheus/treesliceR")
+devtools::install_github("AraujoMat/treesliceR")
 ```
 
 Now, you are ready to temporally dissect any phylogenetic pattern of
@@ -123,17 +123,17 @@ interest!
 To learn about various ways to use and solve problems using
 **treesliceR**, you can explore some of our vignettes:
 
-- [Basic applications](https://github.com/AraujoTheus/treesliceR): This
+- [Basic applications](https://github.com/AraujoMat/treesliceR): This
   section provides straightforward and beginner-friendly applications
   with simple illustrations of the tools available within the package;
-- [Prune tips](https://github.com/AraujoTheus/treesliceR): Here, you’ll
+- [Prune tips](https://github.com/AraujoMat/treesliceR): Here, you’ll
   find an applied example of our tools focusing on Australian
   passeriformes, where we compare species richness distributions between
   older and more recent lineages;
 - [Passeriformes
-  diversification](https://github.com/AraujoTheus/treesliceR): In this
+  diversification](https://github.com/AraujoMat/treesliceR): In this
   vignette, we replicate the case study by [Araujo et al. (in
-  review)](https://github.com/AraujoTheus/treesliceR). It presents the
+  review)](https://github.com/AraujoMat/treesliceR). It presents the
   workflow executed for both a single phylogeny and multiple sampled
   phylogenies for passeriformes.
 
@@ -142,7 +142,7 @@ To learn about various ways to use and solve problems using
 Encountering issues with certain **treesliceR** functions on your
 computer? Please report these bugs with a minimal reproducible example
 on the package’s
-[GitHub](https://github.com/AraujoTheus/treesliceR/issues) page. If you
+[GitHub](https://github.com/AraujoMat/treesliceR/issues) page. If you
 have suggestions for improving our algorithms, don’t hesitate to submit
 your ideas through pull requests.
 
