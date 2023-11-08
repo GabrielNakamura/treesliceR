@@ -98,3 +98,46 @@ ggplot(fam_df, aes(x = Family, y = DR_diff,
 
 
 Pay attention that the final outputs could be sligly different from those obtained on the [Araujo et al. (in review)]() manuscript. However, in contrast to the study, this example was executed only for a single passeriformes phylogeny. A more complete assessment using all phylogenies could be executed in the sections below. 
+
+## Second framework example
+
+Herein, we'll use the Australian passeriformes to calculate the CpB-rate for both turnover and nestedness components. Firstly, we'll need to load the paired assemblages with their respective neighborhoods to run the analysis which is stored in an intern object called `pass_asb`. This object is a list of presence-absences matrices, where each lists contain a given Australian focal cell and its respective neighborhood cells. So, let's check the header of the four first columns of the first matrix within the list:
+```{r}
+head(pass_asb[[1]][, 1:4])
+```
+
+We can run some sensitivity analysis to find the most parsimonious number of slices to assess the CpB rate patterns. But first, we'll need to create an vector of number of slices:
+```{r}
+vec <- c(250, 500, 750, 1000, 1250, 1500, 1750, 2000)
+```
+
+Now we can run the sensitivity analysis and visualize its patterns. We'll do only for turnover in order to :
+```{r}
+sens_turn <- CpR_sensitivity(tree = tree, vec = vec, samp = 100,
+                             asb = pass_asb, rate = "CpB", comp = "turnover")
+```
+
+So, we can plot our sensitivity analysis for both components using the `CpR_sensitivity_plot` funcion. We use the ggplot syntaxe to add a vertical line showing our number of slices set for our following analysis:
+```{r}
+# Store each graph within a respective object
+CpR_sensitivity_plot(sens_turn, rate = "CpB", stc = "mean") + 
+  geom_vline(xintercept = 1000, linetype="dashed", color = "black")
+
+```
+
+
+Calculating the CpB-rate from the turnover and nestedness components under a multisite approach (PS: this can take some minutes):
+```{r}
+# For turnover component
+turn <- CpB(tree = tree, n = 1000, asb = pass_asb, comp = "turnover")
+```
+Finally, we can plot these CpB through time or map it. To map it, we can use our intern `AU_grid` object that represents the Australian grid map. Let's do it first for the turnover component:
+```{r ggplot2, echo = FALSE}
+CpR_graph(data = turn, rate = "CpB", qtl = TRUE)
+
+```
+
+```{r}
+CpR_graph(data = turn, rate = "CpB", qtl = TRUE, map = AU_grid)
+```
+
