@@ -14,12 +14,13 @@ This article aims to...
 First of all, to run the analysis within this vignette we'll need to load the `treesliceR`, `ape` and `ggplot2` packages.
 ```{r setup}
 
-libs <- c("ape", "ggplot2")
+libs <- c("ape", "ggplot2", "ggpubr")
 if (!requireNamespace(libs, quietly = TRUE)){
     install.packages(libs)
   }
 library(ape)
 library(ggplot2)
+library(ggpubr)
 
 libs <- c("treesliceR")
 if (!requireNamespace(libs, quietly = TRUE)){
@@ -117,11 +118,24 @@ sens_turn <- CpR_sensitivity(tree = tree, vec = vec, samp = 100,
                              asb = pass_asb, rate = "CpB", comp = "turnover")
 ```
 
+Now we can run the sensitivity analysis and visualize its patterns. We'll do only for turnover in order to :
+```{r}
+sens_turn <- CpR_sensitivity(tree = tree, vec = vec, samp = 100,
+                             asb = pass_asb, rate = "CpB", comp = "turnover")
+sens_nest <- CpR_sensitivity(tree = tree, vec = vec, samp = 100,
+                             asb = pass_asb, rate = "CpB", comp = "nestedness")
+```
+
 So, we can plot our sensitivity analysis for both components using the `CpR_sensitivity_plot` funcion. We use the ggplot syntaxe to add a vertical line showing our number of slices set for our following analysis:
 ```{r}
 # Store each graph within a respective object
-CpR_sensitivity_plot(sens_turn, rate = "CpB", stc = "mean") + 
+turn_sens_plot <- CpR_sensitivity_plot(sens_turn, rate = "CpB", stc = "mean") + 
   geom_vline(xintercept = 1000, linetype="dashed", color = "black")
+nest_sens_plot <- CpR_sensitivity_plot(sens_nest, rate = "CpB", stc = "mean") + 
+  geom_vline(xintercept = 1000, linetype="dashed", color = "black")
+# To plot them together
+ggarrange(turn_sens_plot, nest_sens_plot,
+                    labels = c("a)", "b)"), ncol = 2, nrow = 1)
 
 ```
 
@@ -130,14 +144,23 @@ Calculating the CpB-rate from the turnover and nestedness components under a mul
 ```{r}
 # For turnover component
 turn <- CpB(tree = tree, n = 1000, asb = pass_asb, comp = "turnover")
+# For nestedness component
+nest <- CpB(tree = tree, n = 1000, asb = pass_asb, comp = "nestedness")
 ```
 Finally, we can plot these CpB through time or map it. To map it, we can use our intern `AU_grid` object that represents the Australian grid map. Let's do it first for the turnover component:
 ```{r ggplot2, echo = FALSE}
-CpR_graph(data = turn, rate = "CpB", qtl = TRUE)
-
+turn_1 <- CpR_graph(data = turn, rate = "CpB", qtl = TRUE)
+turn_2 <- CpR_graph(data = turn, rate = "CpB", qtl = TRUE, map = AU_grid)
+# To plot them together
+ggarrange(turn_1, turn_2,
+                    labels = c("a)", "b)"), ncol = 2, nrow = 1)
 ```
 
+And we can do the same for the nestedness component:
 ```{r}
-CpR_graph(data = turn, rate = "CpB", qtl = TRUE, map = AU_grid)
+nest1 <- CpR_graph(data = nest, rate = "CpB", qtl = TRUE)
+nest2 <- CpR_graph(data = nest, rate = "CpB", qtl = TRUE, map = AU_grid)
+# To plot them together
+ggarrange(nest1, nest2,
+                    labels = c("a)", "b)"), ncol = 2, nrow = 1)
 ```
-

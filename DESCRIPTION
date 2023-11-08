@@ -27,3 +27,5 @@ Imports:
     sf (>= 1.0-9)
 LazyData: true
 Config/Needs/website: rmarkdown
+Suggests: 
+    ggpubr (>= 0.6.0)
