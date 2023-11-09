@@ -91,7 +91,7 @@ fam_df$Family <- factor(fam_df$Family, levels = fam_df$Family)
 ```
 
 Now, we can create a graph similar to the manuscript using the package `ggplot2`:
-```{r, eval = FALSE}
+```{r, eval = FALSE, out.width="60%"}
 ggplot(fam_df, aes(x = Family, y = DR_diff,
                     ymin = DR_diff - DR_sd,
                     ymax = DR_diff + DR_sd)) +
@@ -254,7 +254,7 @@ fam_df$Family <- factor(fam_df$Family, levels = fam_df$Family)
 ```
 
 Ploting!
-```{r, eval = FALSE}
+```{r, eval = FALSE, out.width="60%"}
 ggplot(fam_df, aes(x = Family, y = DR_diff,
                     ymin = DR_diff - DR_sd,
                     ymax = DR_diff + DR_sd)) +
