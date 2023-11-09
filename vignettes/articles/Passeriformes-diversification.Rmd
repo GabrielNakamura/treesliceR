@@ -60,7 +60,7 @@ par(mfrow = c(1, 1)) # Returning to a simple 1x1 viewer
 ```
 
 ```{r, echo = FALSE, fig.align='center'}
-knitr::include_graphics("C:/Matheus/Facul/2_Masters/treesliceR/man/figures/Sliced_pas_tree.png")
+knitr::include_graphics(here::here("man", "figures", "Sliced_pas_tree.png"))
 ```
 
 Then, we need to calculate the tip diversification rates (DR) separately for each phylogeny slice, while finding their difference. To calculate the DR, we can use the function `DR()` available within the `treesliceR` package:
@@ -103,7 +103,7 @@ ggplot(fam_df, aes(x = Family, y = DR_diff,
   ylab(expression(paste(DR["recent"]-DR["past"]))) + xlab(NULL)
 ```
 ```{r, echo = FALSE, fig.align='center'}
-knitr::include_graphics("C:/Matheus/Facul/2_Masters/treesliceR/man/figures/OneTree_DR.png")
+knitr::include_graphics(here::here("man", "figures", "OneTree_DR.png"))
 ```
 
 Pay attention that the final outputs could be sligly different from those obtained on the [Araujo et al. (in review)]() manuscript. However, in contrast to the study, this example was executed only for a single passeriformes phylogeny. A more complete assessment using all phylogenies could be executed in the sections below. 
@@ -142,7 +142,7 @@ ggarrange(turn_sens_plot, nest_sens_plot,
 
 ```
 ```{r, echo = FALSE, fig.align='center'}
-knitr::include_graphics("C:/Matheus/Facul/2_Masters/treesliceR/man/figures/OneTree_sensitivity.png")
+knitr::include_graphics(here::here("man", "figures", "OneTree_sensitivity.png"))
 ```
 
 Calculating the CpB-rate from the turnover and nestedness components under a multisite approach (PS: this can take some minutes):
@@ -161,7 +161,7 @@ ggarrange(turn_1, turn_2,
                     labels = c("a)", "b)"), ncol = 2, nrow = 1)
 ```
 ```{r, echo = FALSE, fig.align='center'}
-knitr::include_graphics("C:/Matheus/Facul/2_Masters/treesliceR/man/figures/OneTree_turn.png")
+knitr::include_graphics(here::here("man", "figures", "OneTree_turn.png"))
 ```
 
 And we can do the same for the nestedness component:
@@ -173,7 +173,7 @@ ggarrange(nest1, nest2,
                     labels = c("a)", "b)"), ncol = 2, nrow = 1)
 ```
 ```{r, echo = FALSE, fig.align='center'}
-knitr::include_graphics("C:/Matheus/Facul/2_Masters/treesliceR/man/figures/OneTree_nest.png")
+knitr::include_graphics(here::here("man", "figures", "OneTree_nest.png"))
 ```
 
 # Case study using a multiple (100) passeriformes tree
@@ -250,7 +250,7 @@ fam_df <- fam_df[order(fam_df$DR_diff),]
 fam_df$Family <- factor(fam_df$Family, levels = fam_df$Family)
 ```
 
-# Ploting!
+Ploting!
 ```{r, eval = FALSE}
 ggplot(fam_df, aes(x = Family, y = DR_diff,
                     ymin = DR_diff - DR_sd,
@@ -266,7 +266,7 @@ ggplot(fam_df, aes(x = Family, y = DR_diff,
   ylab(expression(paste(DR["recent"]-DR["past"]))) + xlab(NULL)
 ```
 ```{r, echo = FALSE, fig.align='center'}
-knitr::include_graphics("C:/Matheus/Facul/2_Masters/treesliceR/man/figures/AllTrees_DR.png")
+knitr::include_graphics(here::here("man", "figures", "AllTrees_DR.png"))
 ```
   
 ## Second framework example
@@ -300,7 +300,7 @@ ggarrange(turn_1, turn_2,
           labels = c("a)", "b)"), ncol = 2, nrow = 1)
 ```
 ```{r, echo = FALSE, fig.align='center'}
-knitr::include_graphics("C:/Matheus/Facul/2_Masters/treesliceR/man/figures/AllTrees_turn.png")
+knitr::include_graphics(here::here("man", "figures", "AllTrees_turn.png"))
 ```
 
 Now, we'll run the analysis for the **NESTEDNESS**:
@@ -331,7 +331,7 @@ ggarrange(nest_1, nest_2,
           labels = c("a)", "b)"), ncol = 2, nrow = 1)
 ```
 ```{r, echo = FALSE, fig.align='center'}
-knitr::include_graphics("C:/Matheus/Facul/2_Masters/treesliceR/man/figures/AllTrees_nest.png")
+knitr::include_graphics(here::here("man", "figures", "AllTrees_nest.png"))
 ```
 
 That's it!
