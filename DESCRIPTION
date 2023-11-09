@@ -31,4 +31,6 @@ LazyData: true
 Config/Needs/website: rmarkdown
 Suggests: 
     ggpubr (>= 0.6.0),
-    here (>= 1.0.1)
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
