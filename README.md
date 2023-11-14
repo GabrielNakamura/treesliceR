@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-<a href="https://araujomat.github.io/treesliceR/"><img src="man/figures/logo.png" alt="treesliceR website" align="right" width="280px"/></a>
+<a href="https://araujomat.github.io/treesliceR/"><img src="man/figures/treesliceR_logo.png" alt="treesliceR website" align="right" width="280px"/></a>
 
 # treesliceR
 
