@@ -13,11 +13,10 @@ knitr::opts_chunk$set(
 )
 ```
 
-# treesliceR
+# treesliceR <a href="https://araujomat.github.io/treesliceR/"><img src="man/figures/logo.png" align="right" height="139" alt="treesliceR website" /></a>
 
 <!-- badges: start -->
 <!-- badges: end -->
-
 
 ## Overview
 
