@@ -1,9 +1,13 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# treesliceR <a href="https://araujomat.github.io/treesliceR/"><img src="man/figures/logo.png" align="right" height="139" alt="treesliceR website" /></a>
+<a href="https://araujomat.github.io/treesliceR/"><img src="man/figures/logo.png" alt="treesliceR website" align="right" width="250px"/></a>
+
+# treesliceR
 
 <!-- badges: start -->
+
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://choosealicense.com/licenses/mit/)
 <!-- badges: end -->
 
 ## Overview
