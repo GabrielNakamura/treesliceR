@@ -125,13 +125,14 @@ To learn about various ways to use and solve problems using
 - [Basic applications](https://github.com/AraujoMat/treesliceR): This
   section provides straightforward and beginner-friendly applications
   with simple illustrations of the tools available within the package;
-- [Prune tips](https://github.com/AraujoMat/treesliceR): Here, you’ll
-  find an applied example of our tools focusing on Australian
-  passeriformes, where we compare species richness distributions between
-  older and more recent lineages;
-- [Passeriformes
-  diversification](https://github.com/AraujoMat/treesliceR): In this
-  vignette, we replicate the case study by [Araujo et al. (in
+- [Passerines
+  distribution](https://araujomat.github.io/treesliceR/articles/Passeriformes-distribution.html):
+  Here, you’ll find an applied example of our tools focusing on
+  Australian passeriformes, where we compare species richness
+  distributions between older and more recent lineages;
+- [Passerines
+  diversification](https://araujomat.github.io/treesliceR/articles/Passeriformes-diversification.html):
+  In this vignette, we replicate the case study by [Araujo et al. (in
   review)](https://github.com/AraujoMat/treesliceR). It presents the
   workflow executed for both a single phylogeny and multiple sampled
   phylogenies for passeriformes.
@@ -147,4 +148,8 @@ your ideas through pull requests.
 
 If you have intriguing ideas for exploring phylogenetic information
 temporally, please feel free to contact us via email at:
-*<matheusaraujolima@live.com>*.
+*<matheusaraujolima@live.com>*. You can track our commit updates and
+version controls directly on
+[GitHub](https://github.com/AraujoMat/treesliceR/commits/), or for a
+more amusing experience, check them out
+[here](https://starlogs.dev/AraujoMat/treesliceR).

@@ -14,12 +14,12 @@ knitr::opts_chunk$set(
 )
 ```
 
-This article aims to replicate the case study developed by [Araujo et al. (in review)](https://github.com/AraujoMat/treesliceR). Moreover, here we will present the workflow executed within the study for both a single passerine phylogeny and multiple passerine phylogenies, in order to control the outputted results for phylogenetic uncertainty [Rangel et al., 2015](https://doi.org/10.1111/evo.12644).
+This article aims to replicate the case study developed by [Araujo et al. (in review)](https://github.com/AraujoMat/treesliceR). Moreover, here we will present the workflow executed within the study for both a single passerine phylogeny and multiple passerine phylogenies, in order to control the outputted results for phylogenetic uncertainty [Rangel et al. (2015)](https://doi.org/10.1111/evo.12644).
 
-Before starting our analysis, we'll need to load the `ape`, `ggplot2`, and `ggpubr` packages:
-```{r, eval = FALSE}
+Before starting our analysis, we'll need to load the `ape`, `ggplot2`, and `ggpubr` packages. Additionally, if required, install the `devtools` to invoke the `treesliceR` package:
+```{r, message = FALSE, warning = FALSE}
 # Creating a list of our desired packages
-libs <- c("ape", "ggplot2", "ggpubr")
+libs <- c("ape", "devtools", "ggplot2", "ggpubr")
 
 # Checking if they're installed
 if (!requireNamespace(libs, quietly = TRUE)){
@@ -32,8 +32,8 @@ library(ggplot2)
 library(ggpubr)
 ```
 
-Additionally, we'll need to load (and install if necessary) the `treesliceR` package:
-```{r}
+Now, we'll need to load (and install if necessary) the `treesliceR` package:
+```{r, message = FALSE, warning = FALSE}
 # Is it already present within the machine?
 if (!requireNamespace("treesliceR", quietly = TRUE)){
     devtools::install_github("AraujoMat/treesliceR")
@@ -351,7 +351,7 @@ knitr::include_graphics("AllTrees_nest.png")
 
 That's all folks!
 
-## References:
+## References
 Jetz, W., Thomas, G. H., Joy, J. B., Hartmann, K. and Mooers, A. O. 2012. The global diversity of birds in space and time. - Nature 491(7424): 444–448. https://doi.org/10.1038/nature11631
 
 Rangel, T. F., Colwell, R. K., Graves, G. R., Fučíková, K., Rahbek, C. and Diniz-Filho, J. A. F. 2015. Phylogenetic uncertainty revisited: Implications for ecological analyses. - Evolution 69(5): 1301–1312. https://doi.org/10.1111/evo.12644

@@ -30,6 +30,7 @@ Imports:
 LazyData: true
 Config/Needs/website: rmarkdown
 Suggests: 
+    devtools,
     ggpubr (>= 0.6.0),
     knitr,
     rmarkdown
