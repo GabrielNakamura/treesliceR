@@ -79,7 +79,7 @@ older <- older$tip.label
 younger <- younger$tip.label
 ```
 
-Now, we need to evaluate the distribution of these species. To do this, we'll load the passerines species matrix stored in the `pass_mat` object. Let's take a look at the first four species in the matrix:
+Now, we need to evaluate the distribution of these species. To do this, we'll load the passerines species matrix stored in the `pass_mat` object. Let's take a look at the first tree species in the matrix:
 ```{r}
 head(pass_mat[, 1:4])
 ```
