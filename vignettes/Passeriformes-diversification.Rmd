@@ -351,7 +351,7 @@ knitr::include_graphics("AllTrees_nest.png")
 
 That's all folks!
 
-## References
+# References
 Jetz, W., Thomas, G. H., Joy, J. B., Hartmann, K. and Mooers, A. O. 2012. The global diversity of birds in space and time. - Nature 491(7424): 444–448. https://doi.org/10.1038/nature11631
 
 Rangel, T. F., Colwell, R. K., Graves, G. R., Fučíková, K., Rahbek, C. and Diniz-Filho, J. A. F. 2015. Phylogenetic uncertainty revisited: Implications for ecological analyses. - Evolution 69(5): 1301–1312. https://doi.org/10.1111/evo.12644

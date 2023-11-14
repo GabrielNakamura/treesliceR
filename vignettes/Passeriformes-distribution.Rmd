@@ -81,7 +81,7 @@ younger <- younger$tip.label
 
 Now, we need to evaluate the distribution of these species. To do this, we'll load the passerines species matrix stored in the `pass_mat` object. Let's take a look at the first tree species in the matrix:
 ```{r}
-head(pass_mat[, 1:4])
+head(pass_mat[, 1:3])
 ```
 
 Then, we can create subsets of this matrix for both older and younger species. Let's begin with the older ones:
@@ -161,3 +161,10 @@ ggplot() +
 Areas in blue indicate a higher predominance of younger lineages than expected, while in red those older lineages predominate. Areas colored in grey indicate that the observed species richness of younger and older species matches the richness expected by our model.
 
 Using these residuals, we can attempt to infer the processes leading to the differences between the species richness of older and younger lineages. Interestingly, these differences observed in the residuals are highly structured in space. On the one hand, there is a higher predominance of older lineages within deserts, which could be attributed to a processes of lower diversification rates within these locations over time. On the other hand, younger lineages predominate in humid areas and islands, indicating locations where diversification rates are higher and continually generate recent lineages. However, both mechanisms mentioned here remain in the realm of hypothesis and are open to further empirical testing.
+
+That’s all folks!
+
+# Related research
+Hawkins, B. A., Diniz‐Filho, J. A. F., Jaramillo, C. A, and Soeller, S. A. 2007. Climate, Niche Conservatism, and the Global Bird Diversity Gradient. - The American Naturalist 170(S2): S16–S27. https://doi.org/10.1086/519009
+
+Sonne, J., Dalsgaard, B., Borregaard, M. K., Kennedy, J., Fjeldså, J. and Rahbek, C. 2022. Biodiversity cradles and museums segregating within hotspots of endemism. - Proceedings of Royal Society: B. 289: 20221102. https://doi.org/10.1098/rspb.2022.1102
