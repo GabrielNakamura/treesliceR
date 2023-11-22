@@ -1,0 +1,131 @@
+---
+title: "Introduction to treeSlicer"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Introduction
+
+```{r}
+libs <- c("ape", "ggtree", "ggplot2", "cowplot")
+
+# Checking if they're installed
+if (!requireNamespace(libs, quietly = TRUE)){
+    install.packages(libs)
+}
+
+# Loading them
+library(ape)
+library(ggtree)
+library(ggplot2)
+library(cowplot)
+devtools::load_all()
+```
+
+# General overview
+
+treeSlicer provides a set of functions that can be used to slice phylogenetic trees in alternative ways. Slicing phylogenies can be used for different tasks, from vizualization purposes to conduct downstream analysis (for some examples see the main study and some other studies).
+
+For this purpose we will use a phylogenetic tree presented in the package.
+
+
+```{r readData, echo=TRUE, eval=TRUE}
+tree <- pass_trees[[1]]
+```
+
+# Prunning function
+
+treeSlicer has built-in functions that allows to prune a phylogenetic tree based on a specific depth (depending on the unit in which the phylogenetic tree is presented). Here we show how we can prune a phylogeny based on depth.
+
+
+```{r}
+older <- prune_tips(tree, 0.75, qtl = T)
+```
+
+
+# Slicing functions
+
+In this section we will show different ways in which tresSlicer allows to perform tree slicing and vizualize the output of these functions. 
+
+
+## Slicing from tip to roots
+
+The first option to slice phylogenies using `treeSlicer` is by squeezing its branch lengths from the tips to the root using the function `squeeze_int`. In this function we need to provide a phylogenetic tree and the depth in which the branches will be squeezed. For example, let's squeeze the example phylogeny at three different ages: 10, 30 and 50 million years (myr).
+
+```{r squeezeTip, echo=TRUE, eval=FALSE}
+plot(tree)
+
+tree_squeeze10 <- squeeze_tips(tree = tree, time = 10, criteria = "my", dropNodes = FALSE)
+tree_squeeze10 <- squeeze_tips(tree = tree, time = 10, criteria = "my", dropNodes = TRUE)
+
+```
+
+We can plot the phylogeny before and after the squeezing process to check out the difference
+
+```{r plotSqueeze, echo=TRUE, eval=FALSE}
+tree_original <- 
+  ggtree(tree, layout = "circular", size = .3)  +
+  geom_treescale(x = 0, width = 20, linesize = .5, color = "blue", 
+                 fontsize = 0) + #  plot the scale bar
+  annotate("text", x = 4, y = 500, label = "20 myr", size = 1.5)
+
+tree_squeeze10 <- 
+  ggtree(tree_squeeze10, layout = "circular", size = .3)  +
+  geom_treescale(x = 0, width = 20, linesize = .5, color = "blue", 
+                 fontsize = 0) + #  plot the scale bar
+  annotate("text", x = 4, y = 500, label = "20 myr", size = 1.5)
+
+# plotting both trees
+cowplot::plot_grid(tree_original, tree_squeeze10, nrow = 1, labels = c("Original tree", "Squeezed 10myr"))
+
+```
+As mentioned before, we can squeeze the tree using diffent depths. Let's try it out with 30 and 50 myr and plot all trees to check the differences.
+
+```{r plotSqueeze2, echo=TRUE, eval=TRUE}
+tree_squeeze30 <- squeeze_tips(tree = tree, time = 30, criteria = "my", dropNodes = FALSE)
+tree_squeeze50 <- squeeze_tips(tree = tree, time = 50, criteria = "my", dropNodes = FALSE)
+
+tree_squeeze30 <- 
+  ggtree(tree_squeeze30, layout = "circular", size = .3)  +
+  geom_treescale(x = 0, width = 20, linesize = .5, color = "blue", 
+                 fontsize = 0) + #  plot the scale bar
+  annotate("text", x = 4, y = 500, label = "20 myr", size = 1.5)
+
+tree_squeeze50 <- 
+  ggtree(tree_squeeze50, layout = "circular", size = .3)  +
+  geom_treescale(x = 0, width = 20, linesize = .5, color = "blue", 
+                 fontsize = 0) + #  plot the scale bar
+  annotate("text", x = 4, y = 500, label = "20 myr", size = 1.5)
+
+cowplot::plot_grid(tree_original, tree_squeeze10, tree_squeeze30, tree_squeeze50, nrow = 2, labels = c("Original tree", "Squeezed 10myr", "Squeezed 30myr", "Squeezed 50myr"), label_size = 12)
+```
+
+## Slicing from root to tip
+
+Another option implemented in treeSlicer is the function `squeeze_root`, in which the user can squeeze the phylogenetic tree from the root to the tips using the same depth criteria in myr of pd
+
+```{r squeezeRoot, echo=TRUE, eval=FALSE}
+tree_root50 <- squeeze_root(tree = tree, time = 50, criteria = "my")
+
+tree_root50 <- 
+  ggtree(tree_root50, layout = "circular", size = .3)  +
+  geom_treescale(x = 0, width = 20, linesize = .5, color = "blue", 
+                 fontsize = 0) + #  plot the scale bar
+  annotate("text", x = 4, y = 500, label = "20 myr", size = 1.5)
+
+cowplot::plot_grid(tree_original, tree_root10, nrow = 1, labels = c("Original tree", "Squeezed 10myr"), label_size = 12)
+
+```
+
+
+
